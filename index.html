@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Danny’s Termite & Pest Control | Lancaster & Richmond KY</title>
+  <meta name="description" content="Termite inspections, bed bug treatments, and pest control in Lancaster & Richmond, Kentucky." />
+
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --card:#171719;
+      --card2:#121214;
+      --text:#f2f2f2;
+      --muted:#b7b7b7;
+      --gold:#c9a24d;
+      --gold2:#a8873f;
+      --shadow: 0 18px 45px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+      background: radial-gradient(1100px 700px at 50% -200px, rgba(201,162,77,.20), transparent 60%),
+                  linear-gradient(180deg, #0c0c0d, var(--bg));
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:18px;}
+    .topbar{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:10px 12px; background: rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius); backdrop-filter: blur(10px);
+    }
+    .brand{display:flex; gap:12px; align-items:center; min-width: 0;}
+    .logo{
+      width:54px; height:54px; border-radius:14px; background:#0b0b0c;
+      border:1px solid rgba(255,255,255,.10); overflow:hidden; flex: 0 0 auto;
+      display:grid; place-items:center;
+    }
+    .logo img{width:100%; height:100%; object-fit:cover; display:block;}
+    .brand h1{
+      font-size:16px; margin:0; line-height:1.2;
+      letter-spacing:.2px;
+    }
+    .brand p{margin:3px 0 0; color:var(--muted); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+    .actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;}
+    .btn{
+      appearance:none; border:0; cursor:pointer; text-decoration:none;
+      background: linear-gradient(180deg, var(--gold), var(--gold2));
+      color:#121212; font-weight:800;
+      padding:10px 14px; border-radius:14px;
+      box-shadow: 0 10px 22px rgba(201,162,77,.15);
+      font-size:14px;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn.ghost{
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(201,162,77,.55);
+      box-shadow: none;
+    }
+
+    .hero{
+      margin-top:16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.0));
+      border-radius: calc(var(--radius) + 10px);
+      border: 1px solid rgba(255,255,255,.08);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 0;
+      min-height: 380px;
+    }
+    @media (max-width: 860px){
+      .heroGrid{grid-template-columns:1fr; min-height: unset;}
+    }
+    .heroText{
+      padding:26px 22px 22px;
+      background: radial-gradient(900px 500px at 15% 0%, rgba(201,162,77,.18), transparent 60%),
+                  linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.20));
+    }
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(201,162,77,.45);
+      background: rgba(0,0,0,.25);
+      color: var(--muted);
+      font-size: 12px; font-weight:700;
+    }
+    .kdot{width:8px;height:8px;border-radius:50%;background:var(--gold); box-shadow: 0 0 0 4px rgba(201,162,77,.18);}
+    .heroText h2{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .heroText p{
+      margin:0;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height:1.55;
+      max-width: 58ch;
+    }
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;}
+    .heroMedia{
+      background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+      padding:18px;
+      display:grid;
+      gap:12px;
+      align-content:center;
+    }
+    .imgCard{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: var(--card2);
+      overflow:hidden;
+      position:relative;
+      min-height: 180px;
+    }
+    .imgCard img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      filter: contrast(1.02) saturate(1.05);
+    }
+    .imgLabel{
+      position:absolute; left:12px; bottom:10px;
+      background: rgba(0,0,0,.55);
+      border: 1px solid rgba(255,255,255,.10);
+      color: #fff;
+      font-weight:800;
+      padding:8px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .missing{
+      padding:14px;
+      color:#ffdd9a;
+      font-weight:800;
+      font-size:13px;
+      line-height:1.4;
+    }
+    .missing code{
+      display:inline-block;
+      background: rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.10);
+      padding:2px 6px;
+      border-radius:8px;
+      margin-top:6px;
+      color:#fff;
+      font-weight:700;
+    }
+
+    .section{margin-top:22px;}
+    .section h3{margin:0 0 12px; font-size:20px; letter-spacing:-.2px;}
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:12px;
+    }
+    @media (max-width: 900px){ .cards{grid-template-columns:1fr;} }
+    .card{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.08));
+      box-shadow: 0 14px 35px rgba(0,0,0,.35);
+      padding:14px;
+      display:grid;
+      gap:10px;
+    }
+    .chip{
+      font-size:12px; font-weight:900;
+      color:#111;
+      background: linear-gradient(180deg, var(--gold), var(--gold2));
+      padding:6px 10px;
+      border-radius: 999px;
+      white-space:nowrap;
+    }
+    .card h4{margin:0; font-size:16px;}
+    .card p{margin:0; color:var(--muted); font-size:14px; line-height:1.5;}
+
+    .quote{
+      margin-top: 18px;
+      border-radius: calc(var(--radius) + 10px);
+      border:1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.25);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .quoteInner{display:grid; grid-template-columns: 1fr 1fr; gap:0;}
+    @media (max-width:900px){ .quoteInner{grid-template-columns:1fr;} }
+    .quoteForm{padding:16px;}
+    .quoteForm h3{margin:0 0 10px;}
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:10px;}
+    @media (max-width:520px){ .grid{grid-template-columns:1fr;} }
+    label{display:block; font-size:12px; color:var(--muted); margin:0 0 6px; font-weight:800;}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(15,15,16,.65);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical;}
+    .quoteSide{
+      padding:16px;
+      background: radial-gradient(700px 500px at 15% 0%, rgba(201,162,77,.18), transparent 55%),
+                  linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.35));
+      border-left:1px solid rgba(255,255,255,.08);
+    }
+    @media (max-width:900px){ .quoteSide{border-left:0; border-top:1px solid rgba(255,255,255,.08);} }
+    .fine{margin-top:18px; color:#9e9e9e; font-size:12px; line-height:1.4;}
+    footer{padding:18px 0 8px; color:#8f8f8f; font-size:12px; text-align:center;}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">
+          <!-- Using Danny5.png as the logo placeholder (change if you want) -->
+          <img src="Danny5.png" alt="Danny’s Termite & Pest Control Logo"
+               onerror="this.closest('.logo').innerHTML='<div class=&quot;missing&quot;>Logo missing<br><code>Danny5.png</code></div>';">
+        </div>
+        <div style="min-width:0">
+          <h1>Danny’s Termite &amp; Pest Control</h1>
+          <p>Serving Lancaster &amp; Richmond, Kentucky</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <!-- REPLACE THESE NUMBERS -->
+        <a class="btn" href="tel:+1859XXXXXXX">Lancaster Call</a>
+        <a class="btn" href="tel:+1859XXXXXXX">Richmond Call</a>
+
+        <!-- Facebook link you gave -->
+        <a class="btn ghost" href="https://www.facebook.com/profile.php?id=100063556152323" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="heroGrid">
+        <div class="heroText">
+          <div class="kicker"><span class="kdot"></span> Fast scheduling • Local service • Honest pricing</div>
+          <h2>Your Local Termite &amp; Pest Control Experts</h2>
+          <p>
+            Professional termite inspections, bed bug treatments, roach/ant control, and general pest services
+            for homes and businesses in Lancaster &amp; Richmond.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn" href="#quote">Request a Free Quote</a>
+            <a class="btn ghost" href="tel:+1859XXXXXXX">Call Now</a>
+          </div>
+
+          <div class="fine">
+            This file is offline-friendly. If any image fails, it will show the missing filename on screen.
+          </div>
+        </div>
+
+        <div class="heroMedia">
+          <div class="imgCard">
+            <img src="Danny4.png" alt="Termite service photo"
+                 onerror="this.outerHTML='<div class=&quot;imgCard&quot;><div class=&quot;missing&quot;>Image not found:<br><code>Danny4.png</code></div></div>';">
+            <div class="imgLabel">Termite Inspections</div>
+          </div>
+
+          <div class="imgCard" style="min-height:150px;">
+            <img src="Danny3.png" alt="Pest control photo"
+                 onerror="this.outerHTML='<div class=&quot;imgCard&quot; style=&quot;min-height:150px;&quot;><div class=&quot;missing&quot;>Image not found:<br><code>Danny3.png</code></div></div>';">
+            <div class="imgLabel">Pest Control</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="section">
+      <h3>Our Services</h3>
+      <div class="cards">
+        <div class="card">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+            <h4>Termite Inspections &amp; Treatment</h4>
+            <span class="chip">Most Requested</span>
+          </div>
+          <p>Clear inspections, real findings, and treatment options that fit your structure and budget.</p>
+        </div>
+
+        <div class="card">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+            <h4>Bed Bug Treatments</h4>
+            <span class="chip">Fast Help</span>
+          </div>
+          <p>Discreet scheduling, detailed prep guidance, and thorough treatment plans.</p>
+        </div>
+
+        <div class="card">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+            <h4>General Pest Control</h4>
+            <span class="chip">Homes &amp; Biz</span>
+          </div>
+          <p>Roaches, ants, spiders, wasps and more — service plans or one-time visits.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="section">
+      <h3>Photos</h3>
+      <div class="cards">
+        <div class="imgCard">
+          <img src="Danny1.png" alt="Photo 1"
+               onerror="this.outerHTML='<div class=&quot;imgCard&quot;><div class=&quot;missing&quot;>Missing:<br><code>Danny1.png</code></div></div>';">
+          <div class="imgLabel">Photo 1</div>
+        </div>
+
+        <div class="imgCard">
+          <img src="Danny2.png" alt="Photo 2"
+               onerror="this.outerHTML='<div class=&quot;imgCard&quot;><div class=&quot;missing&quot;>Missing:<br><code>Danny2.png</code></div></div>';">
+          <div class="imgLabel">Photo 2</div>
+        </div>
+
+        <div class="imgCard">
+          <img src="Danny5.png" alt="Photo 3"
+               onerror="this.outerHTML='<div class=&quot;imgCard&quot;><div class=&quot;missing&quot;>Missing:<br><code>Danny5.png</code></div></div>';">
+          <div class="imgLabel">Photo 3</div>
+        </div>
+      </div>
+
+      <div class="fine">
+        If any show missing, then either: (1) the filename doesn’t match EXACTLY, or (2) the image isn’t in the same folder as index.html.
+      </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div id="quote" class="quote">
+      <div class="quoteInner">
+        <div class="quoteForm">
+          <h3>Request a Free Quote</h3>
+          <div class="grid">
+            <div>
+              <label>Your name</label>
+              <input id="name" placeholder="Full name" />
+            </div>
+            <div>
+              <label>Phone</label>
+              <input id="phone" placeholder="(859) 555-1234" inputmode="tel" />
+            </div>
+            <div>
+              <label>Email</label>
+              <input id="email" placeholder="you@email.com" inputmode="email" />
+            </div>
+            <div>
+              <label>Service needed</label>
+              <select id="service">
+                <option>Termite inspection</option>
+                <option>Bed bugs</option>
+                <option>General pest control</option>
+                <option>Roaches / Ants</option>
+                <option>Wasps</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top:10px;">
+            <label>Message</label>
+            <textarea id="msg" placeholder="Address/city + what you’re seeing + best time to contact"></textarea>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <button class="btn" type="button" onclick="sendSMS()">Text Quote Request</button>
+            <button class="btn ghost" type="button" onclick="sendEmail()">Email Quote Request</button>
+          </div>
+
+          <div class="fine">
+            This sends through your phone’s SMS/email apps.
+          </div>
+        </div>
+
+        <div class="quoteSide">
+          <h3 style="margin:0 0 10px;">Quick Contact</h3>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="tel:+1859XXXXXXX">Call Lancaster</a>
+            <a class="btn" href="tel:+1859XXXXXXX">Call Richmond</a>
+            <a class="btn ghost" href="https://www.facebook.com/profile.php?id=100063556152323" target="_blank" rel="noopener">Facebook Page</a>
+          </div>
+
+          <div class="fine">
+            Replace the <b>+1859XXXXXXX</b> numbers and the email below and you’re set.
+          </div>
+
+          <div class="fine">
+            Email target: <b>info@dannystermite.com</b>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="yr"></span> Danny’s Termite &amp; Pest Control • Lancaster &amp; Richmond, KY
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+
+    function buildMessage(){
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const service = document.getElementById("service").value;
+      const msg = document.getElementById("msg").value.trim();
+
+      let out = "Quote Request - Danny’s Termite & Pest Control%0A";
+      if(name) out += "Name: " + encodeURIComponent(name) + "%0A";
+      if(phone) out += "Phone: " + encodeURIComponent(phone) + "%0A";
+      if(email) out += "Email: " + encodeURIComponent(email) + "%0A";
+      out += "Service: " + encodeURIComponent(service) + "%0A";
+      if(msg) out += "Message: " + encodeURIComponent(msg) + "%0A";
+      return out;
+    }
+
+    function sendSMS(){
+      const to = "+1859XXXXXXX"; // <-- replace
+      const body = buildMessage();
+      window.location.href = "sms:" + to + "?&body=" + body;
+    }
+
+    function sendEmail(){
+      const to = "info@dannystermite.com"; // <-- replace if needed
+      const subject = encodeURIComponent("Quote Request - Danny’s Termite & Pest Control");
+      const body = decodeURIComponent(buildMessage()).replaceAll("%0A","\n");
+      window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + encodeURIComponent(body);
+    }
+  </script>
+</body>
+</html>
